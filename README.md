@@ -9,32 +9,32 @@ List and briefly describe the key features and functionalities of your project. 
 - JWT authentication for user authorization.
 
 ## Configuration
-# Server port
+### Server port
 server.port=8080
 
-# Logging settings
+### Logging settings
 logging.level.com.example.project=INFO
 
-# Spring Security settings
+### Spring Security settings
 spring.security.enabled=true
 spring.security.whitelist=/public/**,/auth/login,/auth/register
 
-# Development Database Settings
+### Development Database Settings
 spring.datasource.url=jdbc:mysql://localhost:3306/devdb
 spring.datasource.username=devuser
 spring.datasource.password=devpassword
 
 ## Security
-# Security
+### Security
 In this project, we've implemented basic Spring Security to ensure a secure and controlled access to your application. Here's a breakdown of the key security components:
 
-# CORS Policy Checking:
+### CORS Policy Checking:
 We have configured Cross-Origin Resource Sharing (CORS) policies to control which origins are allowed to access resources on your server. This helps prevent unauthorized cross-origin requests.
 
-# CSRF Protection:
+### CSRF Protection:
 We have enabled CSRF (Cross-Site Request Forgery) protection to mitigate potential attacks. This ensures that all state-changing requests, such as form submissions, are accompanied by valid CSRF tokens.
 
-# Role-Based Security: 
+### Role-Based Security: 
 We have implemented role-based security to restrict access to certain endpoints or functionalities based on user roles. Roles help determine what actions users are allowed to perform within the application. For example, you can have roles like "USER" and "ADMIN."
 
 ## Exception Handling
@@ -49,7 +49,7 @@ The front-end can consume these error messages to improve the user experience by
 ## JWT Authentication
 JSON Web Tokens (JWT) are used for secure authentication in this project. Here's how the JWT authentication process works and how you can obtain and use tokens:
 
-# Obtaining JWT Tokens:
+### Obtaining JWT Tokens:
 
 When a user logs in or authenticates, a JWT token is issued by the server.
 This token contains information about the user and is signed with a secret key to ensure its integrity.
