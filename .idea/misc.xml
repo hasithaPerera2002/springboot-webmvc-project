@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/userService/pom.xml" />
+        <option value="$PROJECT_DIR$/guideService2/guide-service-spring-web-mvc/GuideService/pom.xml" />
+        <option value="$PROJECT_DIR$/hotelService/HotelService/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/userService2/UserService/pom.xml" />
+        <option value="$PROJECT_DIR$/vehicleService/vehicleService/pom.xml" />
+        <option value="$PROJECT_DIR$/travelService/TravelService/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/guide-service-spring-web-mvc/GuideService/pom.xml" />
+        <option value="$PROJECT_DIR$/hotelService/pom.xml" />
+        <option value="$PROJECT_DIR$/GuideService/pom.xml" />
+        <option value="$PROJECT_DIR$/travelService/pom.xml" />
+        <option value="$PROJECT_DIR$/vehicleService/pom.xml" />
+        <option value="$PROJECT_DIR$/vehicleService2/vehicleService/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

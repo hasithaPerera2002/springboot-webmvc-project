@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GuideService/GuideService.iml" filepath="$PROJECT_DIR$/GuideService/GuideService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/course_work_AAD.iml" filepath="$PROJECT_DIR$/.idea/course_work_AAD.iml" />
+    </modules>
+  </component>
+</project>

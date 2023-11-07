@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/gateway/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guide-service-spring-web-mvc/GuideService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guideService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/guideService2/guide-service-spring-web-mvc/GuideService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hotelService/HotelService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hotelService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/travelService/TravelService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/travelService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/userService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/userService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/userService2/UserService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vehicleService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vehicleService/vehicleService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vehicleService2/vehicleService/src/main/java" charset="UTF-8" />
+  </component>
+</project>

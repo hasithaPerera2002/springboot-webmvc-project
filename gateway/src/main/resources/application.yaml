@@ -1,0 +1,202 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "*"
+
+      routes:
+
+        - id: login
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/user/login
+
+        - id: register
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/user/register
+
+
+        - id: get_user
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/user/getUser
+          filters:
+            - AuthenticationFilter= USER,ADMIN_USER_SERVICE
+
+        - id: update_user
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/user/update
+          filters:
+            - AuthenticationFilter= USER,ADMIN_USER_SERVICE
+
+        - id: delete_user
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/user/delete
+          filters:
+            - AuthenticationFilter= ADMIN_USER_SERVICE
+
+        - id: get_all_users
+          uri: http://localhost:8080
+          predicates:
+            - Path=/api/v1/user/all
+          filters:
+            - AuthenticationFilter= ADMIN_USER_SERVICE
+
+
+        - id: add_guide
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/v1/guide/save
+          filters:
+            - AuthenticationFilter= ADMIN_GUIDE_SERVICE
+
+        - id: get_guide
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/v1/guide/search
+          filters:
+            - AuthenticationFilter= ADMIN_GUIDE_SERVICE
+
+
+        - id: update_guide
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/v1/guide/update
+          filters:
+            - AuthenticationFilter= ADMIN_GUIDE_SERVICE
+
+
+        - id: delete_guide
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/v1/guide/delete
+          filters:
+            - AuthenticationFilter= ADMIN_GUIDE_SERVICE
+
+        - id: get_all_guides
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/v1/guide/all
+          filters:
+            - AuthenticationFilter= ADMIN_GUIDE_SERVICE
+
+        - id: get_available_guides
+          uri: http://localhost:8085
+          predicates:
+            - Path=/api/v1/guide/all/available
+          filters:
+              - AuthenticationFilter= USER, ADMIN_GUIDE_SERVICE
+
+
+        - id: add_hotel
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/v1/hotels/save
+          filters:
+            - AuthenticationFilter= ADMIN_HOTEL_SERVICE
+
+
+
+
+
+
+        - id: get_all_hotels
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/v1/hotels/getAll
+          filters:
+            - AuthenticationFilter= ADMIN_HOTEL_SERVICE
+
+
+        - id: by_category
+          uri: http://localhost:8082
+          predicates:
+            - Path=/api/v1/hotels/*
+          filters:
+              - AuthenticationFilter= USER,ADMIN_HOTEL_SERVICE,
+
+
+
+        - id: add_package
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/v1/package/save
+          filters:
+            - AuthenticationFilter= ADMIN_PACKAGE_SERVICE
+
+        - id: update_package
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/v1/package/update
+          filters:
+            - AuthenticationFilter= ADMIN_PACKAGE_SERVICE
+
+        - id: delete_package
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/v1/package/delete
+          filters:
+            - AuthenticationFilter= ADMIN_PACKAGE_SERVICE
+
+        - id: get_all_package
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/v1/package/all
+
+
+        - id: get_booking
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/v1/booking/getBooking
+          filters:
+            - AuthenticationFilter= USER
+
+
+        - id: save_bookings
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/v1/booking/save
+          filters:
+            - AuthenticationFilter= USER
+
+        - id: save_vehicle
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/v1/vehicles/save
+          filters:
+            - AuthenticationFilter= ADMIN_VEHICLE_SERVICE
+
+        - id: get_all_vehicles
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/v1/vehicles/all
+          filters:
+            - AuthenticationFilter= ADMIN_VEHICLE_SERVICE
+
+        - id: get_all_vehicles_by_category
+          uri: http://localhost:8084
+          predicates:
+            - Path=/api/v1/vehicles/search/*
+          filters:
+            - AuthenticationFilter=USER, ADMIN_VEHICLE_SERVICE
